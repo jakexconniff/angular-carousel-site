@@ -2,12 +2,10 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate'])
 // Controller for entire site
 .controller('mainController', function() {
   var vm = this;
-
-  vm.bigMessage = 'A smooth sea never made a skilled sailor.';
 })
 
 // Home page Controller
-.controller('homeController', function($interval) {
+.controller('homeController', function($interval, $timeout) {
   var vm = this;
   vm.currentBox = 0;
   vm.boxes = [
@@ -47,9 +45,12 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate'])
     } else {
       vm.currentBox++;
     }
+
+    $timeout(vm.runCarousel, 10000);
   };
 
-  $interval(vm.runCarousel, 5000);
+  vm.runCarousel();
+
 })
 
 // About page controller

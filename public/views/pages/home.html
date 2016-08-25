@@ -1,0 +1,28 @@
+<div class="jumbotron text-center">
+  <div ng-repeat="box in home.boxes">
+    <div ng-if="home.carouselSelector($index)" style="background-image: url({{box.bgUrl}});" class="carousel-box">
+      <div class="home-content home-intro" style="color: {{box.fontColor}}">
+        <p><h1>{{ box.headerMessage }}</h1></p>
+        <p>{{ box.subMessage }}</p>
+      </div>
+
+    </div>
+  </div>
+  <div style="height: 500px; position: absolute; top: calc(100vh + 100px); width: 100vw;">
+    <h1>How My Sushi Works</h1>
+    <div>
+      <span style="{width: 33vw;}"><img src="https://s-media-cache-ak0.pinimg.com/236x/b8/83/9c/b8839c43461ee70fe859b07301be2528.jpg"></span>
+      <span style="{width: 33vw;}"><img src="https://s-media-cache-ak0.pinimg.com/236x/b8/83/9c/b8839c43461ee70fe859b07301be2528.jpg"></span>
+      <span style="{width: 33vw;}"><img src="https://s-media-cache-ak0.pinimg.com/236x/b8/83/9c/b8839c43461ee70fe859b07301be2528.jpg"></span>
+    </div>
+  </div>
+  <div>
+
+<!--
+    <div class="home-content home-icons" ng-repeat="box in home.boxes">
+       <a href="/about"><i ng-if="home.carouselSelector($index)" class="fa-hover fa fa-shield fa-5x" style="color: {{ box.fontColor }}"></i></a>
+       <a href="/contact"><i ng-if="home.carouselSelector($index)" class="fa-hover2 fa fa-comment fa-5x" style="color: {{ box.fontColor }}"></i></a>
+    </div>
+-->
+  </div>
+</div>

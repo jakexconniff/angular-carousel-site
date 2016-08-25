@@ -1,0 +1,57 @@
+/* Default, for entire ng-view */
+.ng-enter,
+.ng-leave {
+  width: 100%;
+  position: absolute;
+}
+.ng-enter {
+  -webkit-animation: zoomInDown 1.2s both ease-in;
+  -mon-animation: zoomInDown 1.2s both ease-in;
+  animation: zoomInDown 1.2s both ease-in;
+}
+.ng-leave {
+  -webkit-animation: zoomOutDown 0.5s both ease-in;
+  -moz-animation: zoomOutDown 0.5s both ease-in;
+  animation: zoomOutDown: 0.5s both ease-in;
+}
+
+/* Carousel background (image) slider */
+.carousel-box.ng-enter {
+  animation: slideInRight 0.5s both ease-in;
+}
+
+.carousel-box.ng-leave {
+  animation: slideOutLeft 0.2s both ease-in;
+}
+
+/* First icon on home screen */
+.fa-hover.ng-enter,
+.fa-hover.ng-leave {
+  width: 200px;
+  left: calc(50% - 183px);
+  position: absolute;
+}
+
+.fa-hover.ng-enter {
+  animation: bounceInDown 2s both ease-in;
+}
+
+.fa-hover.ng-leave {
+  animation: bounceOutUp .2s both ease-in;
+}
+
+/* First icon on home screen */
+.fa-hover2.ng-enter,
+.fa-hover2.ng-leave {
+  width: 200px;
+  left: calc(50% - 40px);
+  position: absolute;
+}
+
+.fa-hover2.ng-enter {
+  animation: bounceInDown 2s both ease-in;
+}
+
+.fa-hover2.ng-leave {
+  animation: bounceOutUp .2s both ease-in;
+}
